@@ -3,18 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB Sederhana Pertama Saya</title>
+    <title>Pendaftaran Mahasiswa Sederhana</title>
 </head>
 <body>
-    <h1>Formulir Kontak</h1>
-    <form>
-      <label>Nama:</label><br>
-      <input type="text" name="nama"><br><br>
-  
-      <label>Email:</label><br>
-      <input type="email" name="email"><br><br>
-  
-      <input type="submit" value="Kirim">
+    <h1>Pendaftaran Mahasiswa</h1>
+
+    <form id="studentForm">
+      <div class="form-group">
+        <label for="npm">NPM (Nomor Pokok Mahasiswa):</label>
+        <input type="text" id="npm" name="npm" />
+        <div id="npmError" class="error">NPM harus terdiri dari 10 digit</div>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" />
+        <div id="nameError" class="error">Nama harus diisi</div>
+      </div>
+
+      <div class="form-group">
+        <label for="faculty">Fakultas:</label>
+        <select id="faculty" name="faculty">
+          <option value="">-- Pilih Fakultas --</option>
+          <option value="Ilmu Komputer">Ilmu Komputer</option>
+          <option value="Teknik">Teknik</option>
+          <option value="Bisnis">Bisnis</option>
+          <option value="Seni">Seni</option>
+        </select>
+        <div id="facultyError" class="error">Silakan pilih fakultas</div>
+      </div>
+
+      <button type="submit">Daftar</button>
     </form>
 </body>
 </html>
